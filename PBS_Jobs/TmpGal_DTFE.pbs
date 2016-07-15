@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=9999:00:00
+#PBS -q cluster.q
+#PBS -N TmpGal_DTFE
+#PBS -V
+#PBS -M mahmoud@aims.ac.za
+#PBS -e /users/mhashim/lustre/mhashim/OxProj/TmpGal_DTFE.error
+#PBS -o /users/mhashim/lustre/mhashim/OxProj/TmpGal_DTFE.output
+#PBS -d ./
+
+module purge
+module add apps/plc/1.1
+module add apps/idl/8.5
+module add libs/gsl/2.1/gcc-4.4.7
+module add apps/cgal/4.8 
+module add libs/boost/1.53.0/gcc-4.4.7+openmpi-1.8.1+python-2.7.5
+
+mpirun -np 8  /users/mhashim/lustre/mhashim/OxProj/EXC/DTFE --config /users/mhashim/lustre/mhashim/OxProj/Params/TmpGal_DTFE

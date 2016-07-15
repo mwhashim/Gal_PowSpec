@@ -1,0 +1,15 @@
+&input ! = 
+ verbose  = .true.
+ megaverbose  = .true.
+ filein  = '/users/mhashim/lustre/mhashim/OxProj/Galaxy_Catalog/tmpcat_761_laigle_inputPOWMES_DTFE.dat'
+ nfile  = 3
+ nmpi  = -1
+ read_mass  = .false.
+ nfoldpow  = 0
+ ngrid  = 32
+ norder  = 3
+ shift  = 0.0 0.0 0.0
+ filepower  = '/users/mhashim/lustre/mhashim/OxProj/PowerSpectra/tmpcat_761_laigle_32_DTFE.pow'
+ filepower_fold  = #powspec
+ filetaylor  = #powspec.taylor
+/ ! = 
